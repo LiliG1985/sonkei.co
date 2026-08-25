@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop Dry-Fit Performance — SONKEI CO.</title>
+<meta name="description" content="Shop the SONKEI CO. Dry-Fit performance collection — long-sleeves, tees, sets and accessories in lavender, silver, tan and black.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .shop-header{ position:relative; min-height:260px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; }
+  .shop-header img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 15%; }
+  .shop-header::before{ content:""; position:absolute; inset:0; background:rgba(17,18,20,0.55); }
+  .shop-header-text{ position:relative; z-index:2; display:flex; flex-direction:column; gap:10px; padding:0 24px; }
+  .shop-header-text .title{ font-family:var(--serif); font-size:clamp(28px,4vw,40px); color:var(--offwhite); }
+
+  .shop-body{ display:flex; gap:48px; padding:40px 0 80px; align-items:flex-start; }
+  .filters{ width:220px; flex-shrink:0; display:flex; flex-direction:column; gap:32px; }
+  .filter-group h5{ font-size:11px; font-weight:700; letter-spacing:0.1em; margin:0 0 14px; }
+  .filter-list{ display:flex; flex-direction:column; gap:10px; font-size:13px; color:rgba(17,18,20,0.65); }
+  .filter-list .current{ color:var(--black); font-weight:700; }
+  .swatch-row{ display:flex; gap:10px; flex-wrap:wrap; }
+  .swatch{ width:24px; height:24px; border-radius:50%; }
+  .size-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .size-chip{ width:36px; height:36px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(17,18,20,0.25); font-size:11px; }
+
+  .grid-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:8px; }
+  .grid-head span{ font-size:12px; color:rgba(17,18,20,0.55); }
+  .product-grid{ display:grid; grid-template-columns:repeat(3, minmax(200px,1fr)); gap:28px; flex:1; }
+  .product-card .pic{ position:relative; padding-top:120%; overflow:hidden; }
+  .product-card .pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .product-card .name{ margin-top:12px; font-size:13px; }
+  .product-card .price{ font-size:12px; color:rgba(17,18,20,0.55); margin-top:2px; }
+
+  @media (max-width: 880px){
+    .shop-body{ flex-direction:column; gap:32px; }
+    .filters{ width:100%; flex-direction:row; flex-wrap:wrap; gap:28px 40px; }
+    .product-grid{ grid-template-columns:repeat(2, minmax(140px,1fr)); }
+  }
+  @media (max-width: 460px){
+    .product-grid{ grid-template-columns:1fr 1fr; gap:16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo-lockup.png" alt="SONKEI CO."></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="shop.html" class="active">SHOP</a>
+    <a href="shop.html">COLLECTIONS</a>
+    <a href="#">ABOUT</a>
+    <a href="#">JOURNAL</a>
+    <a href="#">CONTACT</a>
+  </div>
+  <div class="nav-icons">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    <div class="cart-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>0</span>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="shop.html">SHOP</a>
+  <a href="shop.html">COLLECTIONS</a>
+  <a href="#">ABOUT</a>
+  <a href="#">JOURNAL</a>
+  <a href="#">CONTACT</a>
+</div>
+
+<section class="shop-header">
+  <img src="images/running.jpg" alt="SONKEI dry-fit collection">
+  <div class="shop-header-text">
+    <div class="eyebrow" style="color:var(--lavender);">SONKEI PERFORMANCE</div>
+    <div class="title">Dry-Fit Collection</div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="shop-body">
+    <aside class="filters">
+      <div class="filter-group">
+        <h5>COLLECTION</h5>
+        <div class="filter-list">
+          <span class="current">Performance</span>
+          <span>Core</span>
+          <span>Evolve</span>
+        </div>
+      </div>
+      <div class="filter-group">
+        <h5>CATEGORY</h5>
+        <div class="filter-list">
+          <span>T-Shirts</span>
+          <span>Long Sleeve</span>
+          <span>Hoodies</span>
+          <span>Sets</span>
+          <span>Accessories</span>
+        </div>
+      </div>
+      <div class="filter-group">
+        <h5>COLOUR</h5>
+        <div class="swatch-row">
+          <div class="swatch" style="background:#B7A2D4; border:2px solid var(--black);"></div>
+          <div class="swatch" style="background:#AEB4BC;"></div>
+          <div class="swatch" style="background:#C8B08A;"></div>
+          <div class="swatch" style="background:#111214;"></div>
+          <div class="swatch" style="background:#F3F0EB; border:1px solid rgba(17,18,20,0.2);"></div>
+        </div>
+      </div>
+      <div class="filter-group">
+        <h5>SIZE</h5>
+        <div class="size-row">
+          <div class="size-chip">XS</div>
+          <div class="size-chip">S</div>
+          <div class="size-chip">M</div>
+          <div class="size-chip">L</div>
+          <div class="size-chip">XL</div>
+        </div>
+      </div>
+    </aside>
+
+    <div style="flex:1;">
+      <div class="grid-head">
+        <span>9 products</span>
+        <span>SORT BY&nbsp;&nbsp;Featured</span>
+      </div>
+      <div class="product-grid">
+
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--lavender);"><img src="images/man-front.jpg" alt="Long-Sleeve Dry-Fit — Lavender" style="object-position:50% 8%;"></div>
+          <div class="name">Long-Sleeve Dry-Fit — Lavender</div>
+          <div class="price">$68.00</div>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--silver);"><img src="images/man-back.jpg" alt="Long-Sleeve Dry-Fit — Silver" style="object-position:50% 5%;"></div>
+          <div class="name">Long-Sleeve Dry-Fit — Silver</div>
+          <div class="price">$68.00</div>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--tan);"><img src="images/woman-tan.jpg" alt="Long-Sleeve Dry-Fit — Tan" style="object-position:50% 8%;"></div>
+          <div class="name">Long-Sleeve Dry-Fit — Tan</div>
+          <div class="price">$68.00</div>
+        </a>
+
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--silver);"><img src="images/running.jpg" alt="Performance Tee — Silver" style="object-position:50% 10%;"></div>
+          <div class="name">Performance Tee — Silver</div>
+          <div class="price">$48.00</div>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--lavender);"><img src="images/gymwoman.jpg" alt="Performance Set — Lavender" style="object-position:50% 4%;"></div>
+          <div class="name">Performance Set — Lavender</div>
+          <div class="price">$86.00</div>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--black);"><img src="images/couple.jpg" alt="Oversized Tee — Tan" style="object-position:65% 10%;"></div>
+          <div class="name">Oversized Tee — Tan</div>
+          <div class="price">$52.00</div>
+        </a>
+
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--tan);"><img src="images/texture.jpg" alt="Performance Shorts — Lavender"></div>
+          <div class="name">Performance Shorts — Lavender</div>
+          <div class="price">$42.00</div>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--silver);"><img src="images/couple.jpg" alt="Performance Long Sleeve — Silver" style="object-position:82% 25%;"></div>
+          <div class="name">Performance Long Sleeve — Silver</div>
+          <div class="price">$68.00</div>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="pic" style="background:var(--lavender);"><img src="images/gymwoman.jpg" alt="Performance Leggings — Lavender" style="object-position:50% 30%;"></div>
+          <div class="name">Performance Leggings — Lavender</div>
+          <div class="price">$58.00</div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-brand">
+      <img src="images/butterfly.png" alt="SONKEI butterfly mark">
+      <div class="word">SONKEI<small>CO.</small></div>
+      <p>Rooted in purpose.<br>Made to evolve.</p>
+      <div class="footer-social">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><path d="M17 3c.6 2.4 2.2 3.8 5 4v3.2c-1.9 0-3.6-.6-5-1.7V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.2a2.8 2.8 0 1 0 2 2.7V3h3z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <a href="shop.html">All Products</a>
+      <a href="shop.html">New Arrivals</a>
+      <a href="shop.html">T-Shirts</a>
+      <a href="shop.html">Hoodies</a>
+      <a href="shop.html">Performance</a>
+      <a href="shop.html">Accessories</a>
+    </div>
+    <div class="footer-col">
+      <h4>COLLECTIONS</h4>
+      <a href="shop.html">Core Collection</a>
+      <a href="shop.html">Performance</a>
+      <a href="shop.html">Evolve Collection</a>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <a href="#">About Us</a>
+      <a href="#">Our Purpose</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Journal</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>HELP</h4>
+      <a href="#">FAQ</a>
+      <a href="#">Shipping &amp; Delivery</a>
+      <a href="#">Returns &amp; Exchanges</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Track Your Order</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 SONKEI CO. All rights reserved.</span>
+    <div class="footer-legal">
+      <span>Privacy Policy</span>
+      <span>Terms &amp; Conditions</span>
+      <span>Cookie Settings</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
