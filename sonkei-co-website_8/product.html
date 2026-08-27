@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long-Sleeve Dry-Fit — SONKEI CO.</title>
+<meta name="description" content="SONKEI CO. Long-Sleeve Dry-Fit — moisture-wicking, quick-dry performance long-sleeve in lavender, silver and tan.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .breadcrumb{ padding:22px 0 0; font-size:11px; letter-spacing:0.08em; color:rgba(17,18,20,0.5); }
+  .product-main{ display:flex; gap:48px; padding:24px 0 72px; flex-wrap:wrap; }
+  .gallery{ width:100%; max-width:600px; flex:1 1 420px; }
+  .gallery .main-pic{ position:relative; padding-top:116%; overflow:hidden; background:var(--silver); }
+  .gallery .main-pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 10%; }
+  .thumbs{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; margin-top:12px; }
+  .thumbs > div{ position:relative; padding-top:100%; overflow:hidden; }
+  .thumbs > div img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 10%; }
+  .thumbs > div.active{ outline:1px solid var(--lavender); outline-offset:-1px; }
+
+  .info{ flex:1 1 340px; max-width:420px; display:flex; flex-direction:column; gap:24px; padding-top:8px; }
+  .info h1{ font-family:var(--serif); font-size:32px; margin:8px 0 0; line-height:1.15; font-weight:500; }
+  .price{ font-size:17px; margin-top:10px; color:rgba(17,18,20,0.85); }
+  .block-title{ font-size:11px; font-weight:700; letter-spacing:0.1em; margin-bottom:10px; }
+  .color-row{ display:flex; gap:10px; }
+  .color-dot{ width:28px; height:28px; border-radius:50%; }
+  .size-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .size-chip{ width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:1px solid rgba(17,18,20,0.25); font-size:12px; cursor:pointer; }
+  .size-chip.selected{ background:var(--black); color:var(--offwhite); border-color:var(--black); }
+  .qty-add{ display:flex; gap:12px; }
+  .qty{ width:110px; height:52px; border:1px solid rgba(17,18,20,0.25); display:flex; align-items:center; justify-content:space-between; padding:0 16px; font-size:14px; }
+  .add-bag{ flex:1; height:52px; }
+  .divider-block{ border-top:1px solid rgba(17,18,20,0.14); padding-top:20px; }
+  .divider-block p{ font-size:13px; line-height:1.7; color:rgba(17,18,20,0.72); margin:0; }
+  .perf-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; }
+  .perf-item{ display:flex; align-items:center; gap:8px; font-size:11px; }
+
+  .related{ padding:8px 0 72px; border-top:1px solid rgba(17,18,20,0.1); }
+  .related h2{ font-family:var(--serif); font-weight:500; font-size:24px; padding-top:40px; margin:0 0 24px; }
+  .related-grid{ display:grid; grid-template-columns:repeat(4, minmax(160px,1fr)); gap:20px; }
+  .related-grid .pic{ position:relative; padding-top:110%; overflow:hidden; }
+  .related-grid .pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .related-grid .name{ margin-top:12px; font-size:13px; }
+  .related-grid .price{ font-size:12px; color:rgba(17,18,20,0.55); margin-top:2px; }
+
+  @media (max-width: 500px){
+    .related-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo-lockup.png" alt="SONKEI CO."></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="shop.html" class="active">APPAREL</a>
+    <a href="nutrition.html">NUTRITION</a>
+    <a href="skincare.html">SKINCARE</a>
+    <a href="index.html#story">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-icons">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    <div class="cart-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>0</span>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="shop.html">APPAREL</a>
+  <a href="nutrition.html">NUTRITION</a>
+  <a href="skincare.html">SKINCARE</a>
+  <a href="index.html#story">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<div class="wrap">
+  <div class="breadcrumb">SHOP&nbsp;&nbsp;/&nbsp;&nbsp;PERFORMANCE&nbsp;&nbsp;/&nbsp;&nbsp;LONG-SLEEVE DRY-FIT</div>
+
+  <div class="product-main">
+    <div class="gallery">
+      <div class="main-pic"><img id="main-pic-img" src="images/man-longsleeve-gym.jpg" alt="Long-Sleeve Dry-Fit"></div>
+      <div class="thumbs">
+        <div class="active"><img src="images/man-longsleeve-gym.jpg" alt="Lavender colourway"></div>
+        <div><img src="images/woman-hoodie-back.jpg" alt="Back detail"></div>
+        <div><img src="images/woman-tan-set.jpg" alt="Tan colourway"></div>
+        <div><img src="images/texture.jpg" alt="Fabric detail" style="object-position:center;"></div>
+      </div>
+    </div>
+
+    <div class="info">
+      <div>
+        <div class="eyebrow" style="color:var(--lavender-deep);">SONKEI PERFORMANCE</div>
+        <h1>Long-Sleeve Dry-Fit</h1>
+        <div class="price">$68.00</div>
+      </div>
+
+      <div>
+        <div class="block-title">COLOUR — LAVENDER</div>
+        <div class="color-row">
+          <div class="color-dot" style="background:#B7A2D4; border:2px solid var(--black);"></div>
+          <div class="color-dot" style="background:#AEB4BC;"></div>
+          <div class="color-dot" style="background:#C8B08A;"></div>
+          <div class="color-dot" style="background:#111214;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:10px;">
+          <span class="block-title" style="margin:0;">SIZE</span>
+          <span style="font-size:11px; color:var(--lavender-deep); letter-spacing:0.06em;">SIZE GUIDE</span>
+        </div>
+        <div class="size-row">
+          <div class="size-chip">XS</div>
+          <div class="size-chip">S</div>
+          <div class="size-chip selected">M</div>
+          <div class="size-chip">L</div>
+          <div class="size-chip">XL</div>
+          <div class="size-chip">XXL</div>
+        </div>
+      </div>
+
+      <div class="qty-add">
+        <div class="qty"><span>−</span><span>1</span><span>+</span></div>
+        <button class="btn btn-dark add-bag">ADD TO BAG</button>
+      </div>
+
+      <div class="divider-block">
+        <div class="block-title">DESCRIPTION</div>
+        <p>A performance long-sleeve built on the SONKEI silhouette — raglan seams, a clean crew neck and a subtle reflective butterfly at the back. Engineered to move with you and finished to be worn well past the workout.</p>
+      </div>
+
+      <div class="divider-block">
+        <div class="block-title">DETAILS</div>
+        <p>Material — Recycled polyester performance knit<br>
+        Fit — True to size, relaxed through the body<br>
+        Care — Machine wash cold, hang dry<br>
+        Construction — Flatlock seams, heat-seal neck label</p>
+      </div>
+
+      <div class="divider-block">
+        <div class="block-title">PERFORMANCE</div>
+        <div class="perf-grid">
+          <div class="perf-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.8"><path d="M12 3c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/></svg>Moisture Wicking</div>
+          <div class="perf-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1"/></svg>Quick Dry</div>
+          <div class="perf-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.8"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>Breathable</div>
+          <div class="perf-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"/></svg>Lightweight</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="related">
+    <h2>You May Also Like</h2>
+    <div class="related-grid">
+      <a href="product.html">
+        <div class="pic" style="background:var(--tan);"><img src="images/man-tee-wall.jpg" alt="Performance Tee — Tan" style="object-position:50% 10%;"></div>
+        <div class="name">Performance Tee — Tan</div>
+        <div class="price">$48.00</div>
+      </a>
+      <a href="product.html">
+        <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Set — Tan" style="object-position:50% 6%;"></div>
+        <div class="name">Performance Set — Tan</div>
+        <div class="price">$86.00</div>
+      </a>
+      <a href="product.html">
+        <div class="pic" style="background:var(--lavender);"><img src="images/woman-coastal.jpg" alt="Oversized Tee — Lavender" style="object-position:50% 8%;"></div>
+        <div class="name">Oversized Tee — Lavender</div>
+        <div class="price">$52.00</div>
+      </a>
+      <a href="product.html">
+        <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Hoodie — Silver" style="object-position:50% 5%;"></div>
+        <div class="name">Hoodie — Silver</div>
+        <div class="price">$74.00</div>
+      </a>
+    </div>
+  </section>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:space-between; padding:24px 0; background:var(--black);">
+  <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <img src="images/butterfly.png" alt="" style="width:26px; height:auto;">
+      <span style="font-size:11px; color:rgba(243,240,235,0.6); letter-spacing:0.06em;">ROOTED IN PURPOSE. MADE TO EVOLVE.</span>
+    </div>
+    <span style="font-size:11px; color:rgba(243,240,235,0.5);">© 2026 SONKEI CO.</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  document.querySelectorAll('.thumbs > div').forEach(function (thumb) {
+    thumb.addEventListener('click', function () {
+      var img = thumb.querySelector('img');
+      document.getElementById('main-pic-img').src = img.src;
+      document.querySelectorAll('.thumbs > div').forEach(function (t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+    });
+  });
+  document.querySelectorAll('.size-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      document.querySelectorAll('.size-chip').forEach(function (c) { c.classList.remove('selected'); });
+      chip.classList.add('selected');
+    });
+  });
+</script>
+</body>
+</html>

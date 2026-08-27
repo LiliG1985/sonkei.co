@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Pack — SONKEI CO.</title>
+<meta name="description" content="SONKEI CO. brand pack — logo suite, colour system, typography and packaging language.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page{ padding:64px 0 80px; }
+  .page-head{ margin-bottom:56px; }
+  .page-head h1{ font-family:var(--serif); font-size:44px; margin:10px 0 0; font-weight:500; }
+  .page-head p{ font-size:14px; color:rgba(17,18,20,0.6); margin-top:8px; max-width:520px; line-height:1.6; }
+  .section-label{ font-size:12px; font-weight:700; letter-spacing:0.14em; margin-bottom:20px; }
+  section.block{ margin-bottom:64px; }
+
+  .logo-grid{ display:grid; grid-template-columns:repeat(3, minmax(200px,1fr)); gap:20px; }
+  .logo-card{ height:260px; background:var(--black); display:flex; align-items:center; justify-content:center; }
+  .card-label{ font-size:12px; font-weight:600; margin-top:14px; }
+  .card-sub{ font-size:11px; color:rgba(17,18,20,0.5); margin-top:2px; }
+
+  .colour-grid{ display:grid; grid-template-columns:repeat(5, minmax(120px,1fr)); gap:20px; }
+  .swatch-block{ height:160px; }
+
+  .type-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .type-card{ padding:40px; height:230px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between; }
+
+  .pack-grid{ display:grid; grid-template-columns:repeat(4, minmax(160px,1fr)); gap:20px; }
+  .pack-card{ height:210px; display:flex; align-items:center; justify-content:center; }
+
+  @media (max-width: 900px){
+    .logo-grid{ grid-template-columns:1fr 1fr; }
+    .colour-grid{ grid-template-columns:repeat(3, minmax(120px,1fr)); }
+    .type-grid{ grid-template-columns:1fr; }
+    .pack-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 480px){
+    .logo-grid{ grid-template-columns:1fr; }
+    .colour-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo-lockup.png" alt="SONKEI CO."></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="shop.html">APPAREL</a>
+    <a href="nutrition.html">NUTRITION</a>
+    <a href="skincare.html">SKINCARE</a>
+    <a href="index.html#story">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-icons">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    <div class="cart-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>0</span>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="shop.html">APPAREL</a>
+  <a href="nutrition.html">NUTRITION</a>
+  <a href="skincare.html">SKINCARE</a>
+  <a href="index.html#story">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<div class="wrap page">
+  <div class="page-head">
+    <div class="eyebrow" style="color:var(--lavender-deep);">SONKEI CO.</div>
+    <h1>Brand Pack</h1>
+    <p>Rooted in purpose. Made to evolve. The core marks, palette, type and packaging language for SONKEI CO.</p>
+  </div>
+
+  <section class="block">
+    <div class="section-label">01 — LOGO SUITE</div>
+    <div class="logo-grid">
+      <div>
+        <div class="logo-card"><img src="images/logo-full.png" alt="Primary logo lockup" style="height:200px; width:auto;"></div>
+        <div class="card-label">Primary Lockup</div>
+        <div class="card-sub">Butterfly + wordmark + tagline — for hero, packaging, print</div>
+      </div>
+      <div>
+        <div class="logo-card"><img src="images/butterfly.png" alt="Butterfly secondary mark" style="height:150px; width:auto;"></div>
+        <div class="card-label">Secondary Mark</div>
+        <div class="card-sub">Butterfly emblem alone — for tags, socials, favicon</div>
+      </div>
+      <div>
+        <div class="logo-card"><img src="images/logo-lockup.png" alt="Horizontal wordmark" style="height:80px; width:auto;"></div>
+        <div class="card-label">Horizontal Wordmark</div>
+        <div class="card-sub">Butterfly + SONKEI CO. side by side — for navigation, headers</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-label">02 — COLOUR SYSTEM</div>
+    <div class="colour-grid">
+      <div><div class="swatch-block" style="background:#B7A2D4;"></div><div class="card-label">Sonkei Lavender</div><div class="card-sub">#B7A2D4 — signature accent</div></div>
+      <div><div class="swatch-block" style="background:#AEB4BC;"></div><div class="card-label">Silver / Cool Grey</div><div class="card-sub">#AEB4BC — performance, modern</div></div>
+      <div><div class="swatch-block" style="background:#C8B08A;"></div><div class="card-label">Sonkei Tan</div><div class="card-sub">#C8B08A — warmth, lifestyle</div></div>
+      <div><div class="swatch-block" style="background:#111214;"></div><div class="card-label">Sonkei Black</div><div class="card-sub">#111214 — luxury, contrast</div></div>
+      <div><div class="swatch-block" style="background:#F3F0EB; border:1px solid rgba(17,18,20,0.12); box-sizing:border-box;"></div><div class="card-label">Soft Off-White</div><div class="card-sub">#F3F0EB — clean space</div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-label">03 — TYPOGRAPHY</div>
+    <div class="type-grid">
+      <div class="type-card" style="background:var(--black);">
+        <div>
+          <div style="font-family:var(--serif); font-size:88px; color:var(--offwhite); line-height:1;">Aa</div>
+          <div style="font-family:var(--serif); font-size:22px; color:var(--lavender); margin-top:6px;">Rooted In Purpose.</div>
+        </div>
+        <div class="eyebrow" style="color:rgba(243,240,235,0.6);">Bodoni Moda — headlines &amp; editorial</div>
+      </div>
+      <div class="type-card" style="background:var(--offwhite); border:1px solid rgba(17,18,20,0.12);">
+        <div>
+          <div style="font-family:var(--sans); font-weight:700; font-size:88px; color:var(--black); line-height:1;">Aa</div>
+          <div style="font-family:var(--sans); font-weight:600; font-size:16px; color:var(--black); margin-top:6px; letter-spacing:0.05em;">SHOP THE COLLECTION</div>
+        </div>
+        <div class="eyebrow" style="color:rgba(17,18,20,0.5);">Manrope — navigation, body, buttons</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">04 — PACKAGING</div>
+    <div class="pack-grid">
+      <div>
+        <div class="pack-card" style="background:var(--tan); align-items:flex-end; padding-bottom:22px; box-sizing:border-box;">
+          <svg width="34" height="30" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+        </div>
+        <div class="card-label">Shopping Bag</div>
+        <div class="card-sub">Tan, lavender butterfly</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--black);">
+          <svg width="30" height="26" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+        </div>
+        <div class="card-label">Shipping Box</div>
+        <div class="card-sub">Matte charcoal, small lavender mark</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--lavender); display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:6px; padding:16px; box-sizing:border-box;">
+          <svg width="16" height="14" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-opacity="0.25" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+          <svg width="16" height="14" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-opacity="0.25" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+          <svg width="16" height="14" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-opacity="0.25" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+          <svg width="16" height="14" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-opacity="0.25" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+          <svg width="16" height="14" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-opacity="0.25" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+          <svg width="16" height="14" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-opacity="0.25" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+        </div>
+        <div class="card-label">Tissue Paper</div>
+        <div class="card-sub">Lavender, repeated butterfly motif</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--offwhite); border:1px solid rgba(17,18,20,0.12); box-sizing:border-box; flex-direction:column; gap:8px;">
+          <svg width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.3"><path d="M12 3c-3 3-5 5-5 8a5 5 0 0 0 10 0c0-3-2-5-5-8z"/></svg>
+          <div style="font-family:var(--serif); font-size:14px;">SONKEI CO.</div>
+          <div style="font-size:9px; letter-spacing:0.12em; color:rgba(17,18,20,0.55); text-align:center;">ROOTED IN PURPOSE.<br>MADE TO EVOLVE.</div>
+        </div>
+        <div class="card-label">Product Card</div>
+        <div class="card-sub">Off-white, minimal type only</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--tan);">
+          <div style="width:110px; height:44px; background:var(--offwhite); border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:9px; letter-spacing:0.1em; color:var(--black);">SONKEI CO.</span>
+          </div>
+        </div>
+        <div class="card-label">Clothing Tag</div>
+        <div class="card-sub">Tan / off-white, lavender print</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--silver);">
+          <div style="width:36px; height:120px; background:var(--lavender); border-radius:14px 14px 6px 6px;"></div>
+        </div>
+        <div class="card-label">Water Bottle</div>
+        <div class="card-sub">Lavender or silver, subtle mark</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--black);">
+          <div style="width:120px; height:64px; background:var(--tan); border-radius:60px 60px 6px 6px;"></div>
+        </div>
+        <div class="card-label">Cap</div>
+        <div class="card-sub">Tan, black, lavender &amp; grey colourways</div>
+      </div>
+      <div>
+        <div class="pack-card" style="background:var(--lavender);">
+          <div style="width:90px; height:110px; background:var(--black); border-radius:6px 6px 30px 30px; position:relative;">
+            <div style="position:absolute; top:-6px; left:14px; width:62px; height:14px; border:2px solid var(--offwhite); border-bottom:none; border-radius:8px 8px 0 0;"></div>
+          </div>
+        </div>
+        <div class="card-label">Dust Bag</div>
+        <div class="card-sub">Black or lavender, subtle butterfly</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer" style="padding-top:0;">
+  <div class="wrap footer-bottom" style="border-top:1px solid rgba(243,240,235,0.14); padding-top:22px;">
+    <span>© 2026 SONKEI CO. All rights reserved.</span>
+    <div class="footer-legal">
+      <span>Privacy Policy</span>
+      <span>Terms &amp; Conditions</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
