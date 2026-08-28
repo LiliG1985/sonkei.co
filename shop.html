@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   .shop-header{ position:relative; min-height:260px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; }
-  .shop-header img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 15%; }
-  .shop-header::before{ content:""; position:absolute; inset:0; background:rgba(17,18,20,0.55); }
+  .shop-header img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 15%; }
+  .shop-header::before{ content:""; position:absolute; inset:0; z-index:1; background:rgba(17,18,20,0.55); }
   .shop-header-text{ position:relative; z-index:2; display:flex; flex-direction:column; gap:10px; padding:0 24px; }
   .shop-header-text .title{ font-family:var(--serif); font-size:clamp(28px,4vw,40px); color:var(--offwhite); }
 
@@ -48,11 +48,10 @@
   <a class="nav-logo" href="index.html"><img src="images/logo-lockup.png" alt="SONKEI CO."></a>
   <div class="nav-links">
     <a href="index.html">HOME</a>
-    <a href="shop.html" class="active">SHOP</a>
+    <a href="shop.html" class="active">APPAREL</a>
+    <a href="nutrition.html">NUTRITION</a>
     <a href="skincare.html">SKINCARE</a>
-    <a href="shop.html">COLLECTIONS</a>
     <a href="index.html#story">ABOUT</a>
-    <a href="#">JOURNAL</a>
     <a href="contact.html">CONTACT</a>
   </div>
   <div class="nav-icons">
@@ -69,18 +68,17 @@
 </nav>
 <div class="mobile-menu">
   <a href="index.html">HOME</a>
-  <a href="shop.html">SHOP</a>
+  <a href="shop.html">APPAREL</a>
+  <a href="nutrition.html">NUTRITION</a>
   <a href="skincare.html">SKINCARE</a>
-  <a href="shop.html">COLLECTIONS</a>
   <a href="index.html#story">ABOUT</a>
-  <a href="#">JOURNAL</a>
   <a href="contact.html">CONTACT</a>
 </div>
 
 <section class="shop-header">
-  <img src="images/running.jpg" alt="SONKEI dry-fit collection">
+  <img src="images/apparel-hero-people.jpg" alt="SONKEI CO. apparel — friends of every background" style="object-position:50% 30%;">
   <div class="shop-header-text">
-    <div class="eyebrow" style="color:var(--lavender);">SONKEI PERFORMANCE</div>
+    <div class="eyebrow" style="color:var(--lavender);">SONKEI APPAREL</div>
     <div class="title">Dry-Fit Collection</div>
   </div>
 </section>
@@ -136,51 +134,51 @@
       <div class="product-grid">
 
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--lavender);"><img src="images/man-front.jpg" alt="Long-Sleeve Dry-Fit — Lavender" style="object-position:50% 8%;"></div>
+          <div class="pic" style="background:var(--lavender);"><img src="images/man-longsleeve-gym.jpg" alt="Long-Sleeve Dry-Fit — Lavender" style="object-position:50% 8%;"></div>
           <div class="name">Long-Sleeve Dry-Fit — Lavender</div>
           <div class="price">$68.00</div>
         </a>
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--silver);"><img src="images/man-back.jpg" alt="Long-Sleeve Dry-Fit — Silver" style="object-position:50% 5%;"></div>
-          <div class="name">Long-Sleeve Dry-Fit — Silver</div>
-          <div class="price">$68.00</div>
+          <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Hoodie — Silver" style="object-position:50% 5%;"></div>
+          <div class="name">Hoodie — Silver</div>
+          <div class="price">$74.00</div>
         </a>
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--tan);"><img src="images/woman-tan.jpg" alt="Long-Sleeve Dry-Fit — Tan" style="object-position:50% 8%;"></div>
-          <div class="name">Long-Sleeve Dry-Fit — Tan</div>
-          <div class="price">$68.00</div>
+          <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Set — Tan" style="object-position:50% 8%;"></div>
+          <div class="name">Performance Set — Tan</div>
+          <div class="price">$86.00</div>
         </a>
 
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--silver);"><img src="images/running.jpg" alt="Performance Tee — Silver" style="object-position:50% 10%;"></div>
-          <div class="name">Performance Tee — Silver</div>
+          <div class="pic" style="background:var(--tan);"><img src="images/man-tee-wall.jpg" alt="Performance Tee — Tan" style="object-position:50% 10%;"></div>
+          <div class="name">Performance Tee — Tan</div>
           <div class="price">$48.00</div>
         </a>
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--lavender);"><img src="images/gymwoman.jpg" alt="Performance Set — Lavender" style="object-position:50% 4%;"></div>
-          <div class="name">Performance Set — Lavender</div>
-          <div class="price">$86.00</div>
+          <div class="pic" style="background:var(--lavender);"><img src="images/woman-hoodie-back.jpg" alt="Cropped Hoodie — Lavender" style="object-position:50% 4%;"></div>
+          <div class="name">Cropped Hoodie — Lavender</div>
+          <div class="price">$78.00</div>
         </a>
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--black);"><img src="images/couple.jpg" alt="Oversized Tee — Tan" style="object-position:65% 10%;"></div>
-          <div class="name">Oversized Tee — Tan</div>
+          <div class="pic" style="background:var(--lavender);"><img src="images/woman-coastal.jpg" alt="Oversized Tee — Lavender" style="object-position:50% 10%;"></div>
+          <div class="name">Oversized Tee — Lavender</div>
           <div class="price">$52.00</div>
         </a>
 
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--tan);"><img src="images/texture.jpg" alt="Performance Shorts — Lavender"></div>
-          <div class="name">Performance Shorts — Lavender</div>
-          <div class="price">$42.00</div>
+          <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Leggings — Tan" style="object-position:50% 60%;"></div>
+          <div class="name">Performance Leggings — Tan</div>
+          <div class="price">$58.00</div>
         </a>
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--silver);"><img src="images/couple.jpg" alt="Performance Long Sleeve — Silver" style="object-position:82% 25%;"></div>
+          <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Performance Long Sleeve — Silver" style="object-position:50% 25%;"></div>
           <div class="name">Performance Long Sleeve — Silver</div>
           <div class="price">$68.00</div>
         </a>
         <a class="product-card" href="product.html">
-          <div class="pic" style="background:var(--lavender);"><img src="images/gymwoman.jpg" alt="Performance Leggings — Lavender" style="object-position:50% 30%;"></div>
-          <div class="name">Performance Leggings — Lavender</div>
-          <div class="price">$58.00</div>
+          <div class="pic" style="background:var(--lavender);"><img src="images/man-longsleeve-gym.jpg" alt="Performance Tee — Lavender" style="object-position:50% 30%;"></div>
+          <div class="name">Performance Tee — Lavender</div>
+          <div class="price">$48.00</div>
         </a>
 
       </div>
@@ -205,35 +203,31 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4>SHOP</h4>
-      <a href="shop.html">Apparel</a>
-      <a href="skincare.html">Skincare</a>
-      <a href="shop.html">New Arrivals</a>
-      <a href="shop.html">T-Shirts</a>
-      <a href="shop.html">Hoodies</a>
+      <h4>APPAREL</h4>
+      <a href="shop.html">All Apparel</a>
       <a href="shop.html">Performance</a>
+      <a href="shop.html">Core Collection</a>
+      <a href="shop.html">Evolve Collection</a>
     </div>
     <div class="footer-col">
-      <h4>COLLECTIONS</h4>
-      <a href="shop.html">Core Collection</a>
-      <a href="shop.html">Performance</a>
-      <a href="shop.html">Evolve Collection</a>
-      <a href="skincare.html">Skincare Essentials</a>
+      <h4>NUTRITION</h4>
+      <a href="nutrition.html">Sea Moss Gel</a>
+      <a href="nutrition.html">Fresh Pressed Juices</a>
+      <a href="nutrition.html">Beet Radiance</a>
+      <a href="nutrition.html">Green Glow</a>
+    </div>
+    <div class="footer-col">
+      <h4>SKINCARE</h4>
+      <a href="skincare.html">Body Butter</a>
+      <a href="skincare.html">Facial Moisturizer</a>
+      <a href="skincare.html">Facial Oil</a>
+      <a href="skincare.html">Perfume / Body Spray</a>
     </div>
     <div class="footer-col">
       <h4>COMPANY</h4>
       <a href="index.html#story">About Us</a>
       <a href="index.html#story">Our Purpose</a>
       <a href="#">Sustainability</a>
-      <a href="#">Journal</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-    <div class="footer-col">
-      <h4>HELP</h4>
-      <a href="#">FAQ</a>
-      <a href="#">Shipping &amp; Delivery</a>
-      <a href="#">Returns &amp; Exchanges</a>
-      <a href="#">Size Guide</a>
       <a href="contact.html">Contact Us</a>
     </div>
   </div>
