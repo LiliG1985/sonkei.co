@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>St Lucian Sea Moss Gel — SONKEI CO.</title>
+<meta name="description" content="SONKEI CO. St Lucian Sea Moss Gel — sun dried, wild crafted, packed with 92 vitamins and minerals. 100% natural and vegan.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .breadcrumb{ padding:22px 0 0; font-size:11px; letter-spacing:0.08em; color:rgba(17,18,20,0.5); }
+  .breadcrumb a{ color:rgba(17,18,20,0.5); }
+  .breadcrumb a:hover{ color:var(--lavender-deep); }
+
+  .sm-header{ position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; min-height:400px; margin-top:18px; }
+  .sm-header img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 32%; }
+  .sm-header::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(17,18,20,0.45) 0%, rgba(17,18,20,0.72) 100%); }
+  .sm-header-text{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:12px; padding:56px 24px; }
+  .sm-header-text .title{ font-family:var(--serif); font-size:clamp(30px,4.4vw,46px); color:var(--offwhite); line-height:1.08; }
+  .sm-header-text p{ font-size:14px; color:rgba(243,240,235,0.75); max-width:440px; }
+
+  .sm-detail{ display:flex; gap:56px; padding:56px 0 20px; align-items:center; flex-wrap:wrap; }
+  .sm-detail .pic{ flex:1 1 380px; position:relative; padding-top:90%; max-width:460px; border-radius:6px; overflow:hidden; background:var(--offwhite); }
+  .sm-detail .pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .sm-detail .copy{ flex:1 1 340px; max-width:440px; }
+  .sm-detail .eyebrow{ color:var(--tan); }
+  .sm-detail h1{ font-family:var(--serif); font-size:clamp(28px,3.6vw,38px); margin:10px 0 14px; line-height:1.14; }
+  .sm-detail .lede{ font-size:14.5px; line-height:1.75; color:rgba(17,18,20,0.68); margin-bottom:20px; }
+  .sm-points{ display:flex; flex-direction:column; gap:12px; margin-bottom:26px; }
+  .sm-points .pt{ display:flex; align-items:center; gap:10px; font-size:13.5px; color:rgba(17,18,20,0.78); }
+  .sm-points .pt svg{ flex-shrink:0; }
+  .sm-buy{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .sm-buy .price{ font-size:17px; color:var(--black); }
+
+  .sm-why{ background:var(--offwhite); padding:64px 0; margin-top:40px; }
+  .sm-why-inner{ max-width:680px; margin:0 auto; text-align:center; }
+  .sm-why h2{ font-family:var(--serif); font-size:clamp(24px,3vw,32px); margin:10px 0 16px; }
+  .sm-why p{ font-size:14px; line-height:1.8; color:rgba(17,18,20,0.68); }
+
+  .sm-benefits{ padding:56px 0 8px; }
+  .sm-benefits-head{ text-align:center; margin-bottom:32px; }
+  .sm-benefits-head h2{ font-family:var(--serif); font-size:clamp(24px,3vw,30px); margin:8px 0 0; }
+  .sm-benefits-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .sm-benefit{ display:flex; flex-direction:column; gap:10px; padding:26px 22px; background:var(--offwhite); border-radius:6px; border:1px solid rgba(17,18,20,0.06); }
+  .sm-benefit h4{ font-family:var(--serif); font-size:16px; margin:0; }
+  .sm-benefit p{ font-size:12.5px; line-height:1.6; color:rgba(17,18,20,0.62); margin:0; }
+
+  .sm-split{ display:flex; gap:48px; padding:56px 0; align-items:center; flex-wrap:wrap; }
+  .sm-split.reverse{ flex-direction:row-reverse; }
+  .sm-split .pic{ flex:1 1 340px; position:relative; padding-top:78%; max-width:480px; border-radius:6px; overflow:hidden; }
+  .sm-split .pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .sm-split .copy{ flex:1 1 300px; max-width:440px; }
+  .sm-split .copy h2{ font-family:var(--serif); font-size:clamp(22px,2.8vw,28px); margin:8px 0 14px; line-height:1.25; }
+  .sm-split .copy p{ font-size:13.5px; line-height:1.75; color:rgba(17,18,20,0.68); margin-bottom:14px; }
+  .sm-split ul{ margin:0; padding-left:18px; font-size:13px; line-height:1.8; color:rgba(17,18,20,0.7); }
+  .sm-split.on-offwhite{ background:var(--offwhite); }
+
+  .sm-masks{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:8px; }
+  .sm-mask-card{ background:var(--offwhite); border-radius:6px; padding:24px 22px; border:1px solid rgba(17,18,20,0.06); }
+  .sm-mask-card h4{ font-family:var(--serif); font-size:17px; margin:0 0 10px; }
+  .sm-mask-card p{ font-size:12.5px; line-height:1.65; color:rgba(17,18,20,0.65); margin:0 0 8px; }
+  .sm-mask-card ol{ margin:0; padding-left:18px; font-size:12.5px; line-height:1.7; color:rgba(17,18,20,0.65); }
+
+  .sm-gallery{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; padding:56px 0; }
+  .sm-gallery .g1{ grid-column:span 2; grid-row:span 2; }
+  .sm-gallery div{ position:relative; overflow:hidden; border-radius:6px; }
+  .sm-gallery .g1{ padding-top:66%; }
+  .sm-gallery > div:not(.g1){ padding-top:66%; }
+  .sm-gallery img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+  .sm-use{ display:flex; gap:48px; padding:8px 0 60px; flex-wrap:wrap; align-items:center; }
+  .sm-use .pic{ flex:1 1 320px; position:relative; padding-top:70%; max-width:480px; border-radius:6px; overflow:hidden; }
+  .sm-use .pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .sm-use .copy{ flex:1 1 280px; max-width:420px; }
+  .sm-use h2{ font-family:var(--serif); font-size:24px; margin:8px 0 14px; }
+  .sm-use ol{ margin:0; padding-left:20px; font-size:13.5px; line-height:1.9; color:rgba(17,18,20,0.7); }
+
+  .sm-pillars{ background:var(--offwhite); border-top:1px solid rgba(17,18,20,0.08); border-bottom:1px solid rgba(17,18,20,0.08); }
+  .sm-pillars .wrap{ display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; padding:34px 0; }
+  .sm-pillar{ display:flex; align-items:center; gap:12px; flex:1 1 200px; }
+  .sm-pillar span{ font-size:12px; letter-spacing:0.05em; color:rgba(17,18,20,0.72); }
+
+  @media (max-width: 880px){
+    .sm-detail, .sm-use, .sm-split{ flex-direction:column; }
+    .sm-split.reverse{ flex-direction:column; }
+    .sm-detail .pic, .sm-use .pic, .sm-split .pic{ max-width:100%; width:100%; }
+    .sm-gallery{ grid-template-columns:1fr 1fr; }
+    .sm-gallery .g1{ grid-column:span 2; }
+    .sm-benefits-grid{ grid-template-columns:1fr 1fr; }
+    .sm-masks{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 520px){
+    .sm-gallery{ grid-template-columns:1fr; }
+    .sm-gallery .g1{ grid-column:span 1; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo-lockup.png" alt="SONKEI CO."></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="shop.html">APPAREL</a>
+    <a href="nutrition.html" class="active">NUTRITION</a>
+    <a href="skincare.html">SKINCARE</a>
+    <a href="index.html#story">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-icons">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    <div class="cart-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>0</span>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="shop.html">APPAREL</a>
+  <a href="nutrition.html">NUTRITION</a>
+  <a href="skincare.html">SKINCARE</a>
+  <a href="index.html#story">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="nutrition.html">NUTRITION</a>&nbsp;&nbsp;/&nbsp;&nbsp;SEA MOSS GEL</div>
+</div>
+
+<section class="sm-header">
+  <img src="images/seamoss-banner.jpg" alt="SONKEI CO. St Lucian Sea Moss Gel">
+  <div class="sm-header-text">
+    <div class="eyebrow" style="color:var(--lavender);">NATURE'S ORIGINAL SUPERFOOD</div>
+    <div class="title">St Lucian Sea Moss Gel</div>
+    <p>Sun dried and wild crafted, packed with 92 vitamins and minerals. Pure. Powerful. Sonkei.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sm-detail">
+    <div class="pic"><img src="images/sea-moss-jar.jpg" alt="SONKEI CO. St Lucian Sea Moss Gel jar"></div>
+    <div class="copy">
+      <div class="eyebrow">THE ORIGINAL</div>
+      <h1>St Lucian Sea Moss Gel</h1>
+      <p class="lede">Hand harvested from the clean coastal waters of St Lucia, sun dried the traditional way, then wild crafted into a smooth, mineral-rich gel — no shortcuts, no fillers, just sea moss.</p>
+      <div class="sm-points">
+        <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"/></svg> Supports Immunity &amp; Energy</div>
+        <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg> Supports Skin &amp; Gut Health</div>
+        <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.8"><path d="M12 3c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/></svg> 100% Natural &amp; Vegan</div>
+      </div>
+      <div class="sm-buy">
+        <a class="btn btn-primary" href="#">SHOP SEA MOSS GEL</a>
+        <span class="price">$34.00 &middot; 16 oz</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="sm-why">
+  <div class="wrap sm-why-inner">
+    <div class="eyebrow" style="color:var(--tan);">WHAT IS SEA MOSS</div>
+    <h2>An ocean superfood, generations in the making.</h2>
+    <p>Sea moss (Chondrus crispus and related species, sometimes called Irish moss) is a nutrient-dense algae that grows along rocky Caribbean and North Atlantic coastlines. It has been used for generations across Caribbean and coastal households as a whole-body wellness ritual — a natural source of iodine, potassium, calcium, sulfur compounds and antioxidants that support energy, digestion, skin and immunity. At SONKEI CO., ours is wild crafted from the clean coastal waters of St Lucia and sun dried the traditional way, then blended into a smooth gel with nothing added and nothing taken away.</p>
+  </div>
+</section>
+
+<section class="sm-benefits">
+  <div class="wrap">
+    <div class="sm-benefits-head">
+      <div class="eyebrow" style="color:var(--tan);">THE BENEFITS</div>
+      <h2>How Sea Moss works, from the inside out.</h2>
+    </div>
+    <div class="sm-benefits-grid">
+      <div class="sm-benefit">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.6"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"/></svg>
+        <h4>Immunity &amp; Energy</h4>
+        <p>Rich in iodine and B-vitamins that support thyroid function, steady energy and a resilient immune system.</p>
+      </div>
+      <div class="sm-benefit">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        <h4>Gut &amp; Digestive Health</h4>
+        <p>Naturally high in soluble fiber and prebiotic compounds that support digestion and a healthy gut lining.</p>
+      </div>
+      <div class="sm-benefit">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.6"><path d="M12 3c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/></svg>
+        <h4>Skin Health</h4>
+        <p>Sulfur and collagen-supporting amino acids help hydrate skin and calm visible redness and irritation.</p>
+      </div>
+      <div class="sm-benefit">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9A82BE" stroke-width="1.6"><path d="M12 21V9"/><path d="M12 9C12 5 9 3 6 3c0 4 2 6 6 6z"/><path d="M12 13c0-4 3-6 6-6 0 4-2 6-6 6z"/></svg>
+        <h4>Hair &amp; Scalp Health</h4>
+        <p>Minerals and vitamin K support a healthier scalp environment and help hair look fuller and shinier over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sm-split reverse">
+  <div class="wrap" style="display:flex; gap:48px; align-items:center; flex-wrap:wrap;">
+    <div class="pic"><img src="images/seamoss-portrait.jpg" alt="SONKEI CO. Sea Moss Gel used in a skin and hair ritual"></div>
+    <div class="copy">
+      <div class="eyebrow" style="color:var(--tan);">SKIN &amp; HAIR</div>
+      <h2>Nourishment that works on the outside too.</h2>
+      <p>Beyond the jar, Sea Moss Gel is a favorite in topical skin and hair rituals. Its natural gel-like texture makes it easy to apply directly, delivering minerals and hydration right where you need them.</p>
+      <ul>
+        <li><strong>Skin:</strong> softens, hydrates and helps calm redness or irritation as a mask or spot treatment.</li>
+        <li><strong>Hair &amp; scalp:</strong> used as a leave-in treatment or scalp mask to support shine, moisture and a healthier-feeling scalp.</li>
+        <li><strong>Sensitive skin:</strong> free of added chemicals, making it gentle enough for daily topical use.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sm-split on-offwhite">
+  <div class="wrap" style="display:flex; gap:48px; align-items:center; flex-wrap:wrap;">
+    <div class="pic"><img src="images/seamoss-bowl.jpg" alt="SONKEI CO. Sea Moss wild crafted and prepared in a bowl"></div>
+    <div class="copy">
+      <div class="eyebrow" style="color:var(--tan);">HOW IT'S HARVESTED</div>
+      <h2>From the coast of St Lucia to your jar.</h2>
+      <p>Our Sea Moss is wild crafted by hand along the clean coastal waters of St Lucia, then laid out and sun dried the traditional way — no machines, no shortcuts. Once fully dried, it's thoroughly cleaned to remove sand and debris, then soaked and blended into the smooth, mineral-rich gel you receive.</p>
+      <p>This slow, traditional process is what keeps the mineral content intact and honors the way Caribbean communities have prepared Sea Moss for generations.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="sm-gallery">
+    <div class="g1"><img src="images/seamoss-friends.jpg" alt="Friends enjoying SONKEI CO. Sea Moss Gel together"></div>
+    <div><img src="images/seamoss-openjar.jpg" alt="SONKEI CO. Sea Moss Gel, open jar"></div>
+    <div><img src="images/seamoss-jar2.jpg" alt="SONKEI CO. Sea Moss Gel jar detail"></div>
+    <div><img src="images/seamoss-spoon.jpg" alt="A spoonful of SONKEI CO. Sea Moss Gel"></div>
+  </div>
+
+  <div class="sm-use">
+    <div class="copy" style="max-width:100%; flex:1 1 100%;">
+      <div class="eyebrow" style="color:var(--tan);">HOW TO USE</div>
+      <h2>Simple to add to your daily ritual.</h2>
+      <ol style="margin:0 0 30px; padding-left:20px; font-size:13.5px; line-height:1.9; color:rgba(17,18,20,0.7);">
+        <li>Take 1&ndash;2 tablespoons daily, straight from the jar.</li>
+        <li>Blend into smoothies, juices or oatmeal for an easy mineral boost.</li>
+        <li>Stir into warm tea or water as a gentle daily tonic.</li>
+        <li>Refrigerate after opening and use within 3&ndash;4 weeks.</li>
+      </ol>
+      <div class="sm-masks">
+        <div class="sm-mask-card">
+          <h4>DIY Face Mask</h4>
+          <p>For a soothing, hydrating mask at home:</p>
+          <ol>
+            <li>Mix 1 tablespoon Sea Moss Gel with 1 teaspoon raw honey.</li>
+            <li>Apply a thin layer to clean, dry skin, avoiding the eye area.</li>
+            <li>Leave on for 10&ndash;15 minutes, then rinse with warm water.</li>
+            <li>Use 1&ndash;2 times per week and follow with your favorite SONKEI CO. moisturizer.</li>
+          </ol>
+        </div>
+        <div class="sm-mask-card">
+          <h4>DIY Hair &amp; Scalp Mask</h4>
+          <p>For added shine and a nourished scalp:</p>
+          <ol>
+            <li>Massage 2&ndash;3 tablespoons of Sea Moss Gel into the scalp and through lengths.</li>
+            <li>Cover with a shower cap and leave on for 20&ndash;30 minutes.</li>
+            <li>Rinse thoroughly, then shampoo and condition as usual.</li>
+            <li>Repeat weekly for best results.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="sm-pillars">
+  <div class="wrap">
+    <div class="sm-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M12 3c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/></svg>
+      <span>WILD CRAFTED — Sun dried the traditional way.</span>
+    </div>
+    <div class="sm-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+      <span>92 VITAMINS &amp; MINERALS</span>
+    </div>
+    <div class="sm-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M4 15c1.5-3 4-3 5-1.5 1-2 3.5-2 4.5.5.7-1.4 2.7-1.6 3.5 0 .8-1.2 2.5-1 3 .5"/><path d="M4 15v3h16v-3"/></svg>
+      <span>100% NATURAL &amp; VEGAN</span>
+    </div>
+    <div class="sm-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M12 21V9"/><path d="M12 9C12 5 9 3 6 3c0 4 2 6 6 6z"/><path d="M12 13c0-4 3-6 6-6 0 4-2 6-6 6z"/></svg>
+      <span>NO ADDITIVES, NO FILLERS</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-brand">
+      <img src="images/butterfly.png" alt="SONKEI butterfly mark">
+      <div class="word">SONKEI<small>CO.</small></div>
+      <p>Rooted in nature.<br>Made with intention.</p>
+      <div class="footer-social">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><path d="M17 3c.6 2.4 2.2 3.8 5 4v3.2c-1.9 0-3.6-.6-5-1.7V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.2a2.8 2.8 0 1 0 2 2.7V3h3z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px; margin-top:8px;">
+        <a href="contact.html">sales@soulfulsentimentsenterprise.com</a>
+        <a href="contact.html">(888) 929-1763</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>NUTRITION</h4>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="sea-moss.html">Sea Moss Gel</a>
+      <a href="juices.html">Fresh Pressed Juices</a>
+    </div>
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <a href="shop.html">Apparel</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="skincare.html">Skincare</a>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <a href="index.html#story">About Us</a>
+      <a href="index.html#story">Our Purpose</a>
+      <a href="#">Sustainability</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <a href="mailto:sales@soulfulsentimentsenterprise.com">sales@soulfulsentimentsenterprise.com</a>
+      <a href="tel:+18889291763">(888) 929-1763</a>
+      <span>4780 I-55 N, Suite 100, #1147<br>Jackson, MS 39211</span>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 SONKEI CO. — Soulful Sentiments Enterprise LLC. All rights reserved.</span>
+    <div class="footer-legal">
+      <span>Privacy Policy</span>
+      <span>Terms &amp; Conditions</span>
+      <span>Cookie Settings</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

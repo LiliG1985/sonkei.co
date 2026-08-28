@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresh Pressed Juices — SONKEI CO.</title>
+<meta name="description" content="SONKEI CO. Fresh Pressed Juices — six cold-pressed flavors made with real fruits, vegetables and roots. No additives, no preservatives.">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .breadcrumb{ padding:22px 0 0; font-size:11px; letter-spacing:0.08em; color:rgba(17,18,20,0.5); }
+  .breadcrumb a{ color:rgba(17,18,20,0.5); }
+  .breadcrumb a:hover{ color:var(--lavender-deep); }
+
+  .jc-header{ position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; min-height:400px; margin-top:18px; }
+  .jc-header img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 32%; }
+  .jc-header::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(17,18,20,0.45) 0%, rgba(17,18,20,0.72) 100%); }
+  .jc-header-text{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:12px; padding:56px 24px; }
+  .jc-header-text .title{ font-family:var(--serif); font-size:clamp(30px,4.4vw,46px); color:var(--offwhite); line-height:1.08; }
+  .jc-header-text p{ font-size:14px; color:rgba(243,240,235,0.75); max-width:460px; }
+
+  .jc-intro{ padding:64px 0 8px; text-align:center; }
+  .jc-intro .eyebrow{ color:var(--tan); }
+  .jc-intro h2{ font-family:var(--serif); font-size:clamp(24px,3vw,32px); color:var(--black); margin:8px 0 14px; }
+  .jc-intro p{ max-width:620px; margin:0 auto; font-size:14px; line-height:1.8; color:rgba(17,18,20,0.68); }
+
+  .nt-grid{ display:grid; grid-template-columns:repeat(3, minmax(200px,1fr)); gap:28px; padding:44px 0 20px; }
+  .p-card{ display:flex; flex-direction:column; }
+  .p-stage{ position:relative; border-radius:6px; padding-top:135%; background:var(--offwhite); overflow:hidden; display:block; }
+  .p-stage img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; transition:transform 0.5s ease; }
+  .p-stage:hover img{ transform:scale(1.04); }
+  .p-info{ margin-top:16px; text-align:left; }
+  .p-info .cat{ font-size:11px; letter-spacing:0.08em; color:var(--tan); text-transform:uppercase; }
+  .p-info .name{ font-family:var(--serif); font-size:19px; color:var(--black); margin-top:4px; }
+  .p-info .desc{ font-size:12.5px; line-height:1.6; color:rgba(17,18,20,0.62); margin-top:6px; }
+  .p-info .row{ display:flex; align-items:center; justify-content:space-between; margin-top:14px; }
+  .p-info .price{ font-size:13px; color:var(--black); }
+
+  .jc-press{ background:var(--offwhite); padding:64px 0; margin-top:44px; }
+  .jc-press-grid{ display:flex; gap:56px; align-items:center; flex-wrap:wrap; }
+  .jc-press .pic{ flex:1 1 340px; position:relative; padding-top:66%; max-width:460px; border-radius:6px; overflow:hidden; }
+  .jc-press .pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .jc-press .copy{ flex:1 1 320px; max-width:440px; }
+  .jc-press .copy h2{ font-family:var(--serif); font-size:clamp(24px,3vw,30px); margin:8px 0 14px; line-height:1.2; }
+  .jc-press .copy p{ font-size:14px; line-height:1.75; color:rgba(17,18,20,0.68); margin-bottom:18px; }
+  .jc-steps{ display:flex; flex-direction:column; gap:14px; }
+  .jc-step{ display:flex; gap:14px; align-items:flex-start; }
+  .jc-step .num{ font-family:var(--serif); font-size:20px; color:var(--lavender-deep); flex-shrink:0; width:28px; }
+  .jc-step .t{ font-size:13.5px; color:rgba(17,18,20,0.75); line-height:1.6; }
+  .jc-step .t strong{ display:block; color:var(--black); font-size:13.5px; margin-bottom:2px; }
+
+  .jc-flavors{ padding:60px 0; }
+  .jc-flavors-head{ text-align:center; margin-bottom:34px; }
+  .jc-flavors-head h2{ font-family:var(--serif); font-size:clamp(24px,3vw,30px); margin:8px 0 0; }
+  .jc-flavor-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:rgba(17,18,20,0.08); border:1px solid rgba(17,18,20,0.08); }
+  .jc-flavor{ background:var(--offwhite); padding:26px 24px; display:flex; flex-direction:column; gap:8px; }
+  .jc-flavor .dot{ width:12px; height:12px; border-radius:50%; margin-bottom:4px; }
+  .jc-flavor h4{ font-family:var(--serif); font-size:17px; margin:0; }
+  .jc-flavor p{ font-size:12.5px; line-height:1.6; color:rgba(17,18,20,0.62); margin:0; }
+
+  .nt-band{ position:relative; min-height:440px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; margin-top:16px; }
+  .nt-band img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
+  .nt-band::before{ content:""; position:absolute; inset:0; z-index:1; background:rgba(17,18,20,0.5); }
+  .nt-band-text{ position:relative; z-index:2; max-width:560px; padding:0 24px; display:flex; flex-direction:column; gap:14px; align-items:center; }
+  .nt-band-text .title{ font-family:var(--serif); font-size:clamp(26px,3.6vw,38px); color:var(--offwhite); line-height:1.16; }
+  .nt-band-text p{ font-size:14px; color:rgba(243,240,235,0.85); }
+
+  .nt-pillars{ background:var(--offwhite); border-top:1px solid rgba(17,18,20,0.08); border-bottom:1px solid rgba(17,18,20,0.08); }
+  .nt-pillars .wrap{ display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; padding:34px 0; }
+  .nt-pillar{ display:flex; align-items:center; gap:12px; flex:1 1 220px; }
+  .nt-pillar span{ font-size:12px; letter-spacing:0.05em; color:rgba(17,18,20,0.72); }
+
+  @media (max-width: 880px){
+    .nt-grid{ grid-template-columns:repeat(2, minmax(160px,1fr)); }
+    .jc-press-grid{ flex-direction:column; }
+    .jc-press .pic{ max-width:100%; width:100%; }
+    .jc-flavor-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 520px){
+    .nt-grid{ gap:20px; }
+    .jc-flavor-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img src="images/logo-lockup.png" alt="SONKEI CO."></a>
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="shop.html">APPAREL</a>
+    <a href="nutrition.html" class="active">NUTRITION</a>
+    <a href="skincare.html">SKINCARE</a>
+    <a href="index.html#story">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+  <div class="nav-icons">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    <div class="cart-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>0</span>
+    </div>
+    <button class="nav-burger" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="shop.html">APPAREL</a>
+  <a href="nutrition.html">NUTRITION</a>
+  <a href="skincare.html">SKINCARE</a>
+  <a href="index.html#story">ABOUT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="nutrition.html">NUTRITION</a>&nbsp;&nbsp;/&nbsp;&nbsp;JUICES</div>
+</div>
+
+<section class="jc-header">
+  <img src="images/juice-lineup.jpg" alt="SONKEI CO. six fresh pressed juices lineup">
+  <div class="jc-header-text">
+    <div class="eyebrow" style="color:var(--lavender);">FRESH PRESSED JUICES</div>
+    <div class="title">SIX FLAVORS.<br>ONE MISSION.</div>
+    <p>Cold-pressed with real fruits, vegetables and roots — no additives, no preservatives. Just fresh pressed nutrition, made for maximum nourishment.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="jc-intro">
+    <div class="eyebrow">WHAT IS FRESH PRESSED?</div>
+    <h2>Juice the way nature intended.</h2>
+    <p>Fresh pressed means exactly that — real produce, slowly pressed to extract every drop of juice without the heat, additives or added sugar found in most bottled juice. Nothing is cooked, concentrated or reconstituted. Just fruits, vegetables and roots, pressed and bottled at their peak.</p>
+  </div>
+
+  <div class="nt-grid">
+
+    <div class="p-card">
+      <a class="p-stage" href="#" aria-label="Shop Green Glow">
+        <img src="images/green-glow-card.jpg" alt="SONKEI CO. Green Glow juice — cucumber, celery, pineapple, kale, lemon">
+      </a>
+      <div class="p-info">
+        <div class="cat">Cucumber &middot; Celery &middot; Pineapple &middot; Kale &middot; Lemon</div>
+        <div class="name">Green Glow</div>
+        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
+        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
+      </div>
+    </div>
+
+    <div class="p-card">
+      <a class="p-stage" href="#" aria-label="Shop Tropical Sunshine">
+        <img src="images/tropical-sunshine.jpg" alt="SONKEI CO. Tropical Sunshine juice — pineapple, mango, orange, passion fruit">
+      </a>
+      <div class="p-info">
+        <div class="cat">Pineapple &middot; Mango &middot; Orange &middot; Passion Fruit</div>
+        <div class="name">Tropical Sunshine</div>
+        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
+        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
+      </div>
+    </div>
+
+    <div class="p-card">
+      <a class="p-stage" href="#" aria-label="Shop Citrus Boost">
+        <img src="images/citrus-boost.jpg" alt="SONKEI CO. Citrus Boost juice — orange, carrot, ginger, turmeric">
+      </a>
+      <div class="p-info">
+        <div class="cat">Orange &middot; Carrot &middot; Ginger &middot; Turmeric</div>
+        <div class="name">Citrus Boost</div>
+        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
+        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
+      </div>
+    </div>
+
+    <div class="p-card">
+      <a class="p-stage" href="#" aria-label="Shop Berry Bliss">
+        <img src="images/berry-bliss.jpg" alt="SONKEI CO. Berry Bliss juice — strawberry, blueberry, raspberry, apple">
+      </a>
+      <div class="p-info">
+        <div class="cat">Strawberry &middot; Blueberry &middot; Raspberry &middot; Apple</div>
+        <div class="name">Berry Bliss</div>
+        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
+        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
+      </div>
+    </div>
+
+    <div class="p-card">
+      <a class="p-stage" href="#" aria-label="Shop Watermelon Refresh">
+        <img src="images/watermelon-refresh.jpg" alt="SONKEI CO. Watermelon Refresh juice — watermelon, lime, mint">
+      </a>
+      <div class="p-info">
+        <div class="cat">Watermelon &middot; Lime &middot; Mint</div>
+        <div class="name">Watermelon Refresh</div>
+        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
+        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
+      </div>
+    </div>
+
+    <div class="p-card">
+      <a class="p-stage" href="#" aria-label="Shop Beet Radiance">
+        <img src="images/beet-radiance-card.jpg" alt="SONKEI CO. Beet Radiance juice — beetroot, apple, carrot, lemon, ginger">
+      </a>
+      <div class="p-info">
+        <div class="cat">Beetroot &middot; Apple &middot; Carrot &middot; Lemon &middot; Ginger</div>
+        <div class="name">Beet Radiance</div>
+        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
+        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="jc-press">
+  <div class="wrap jc-press-grid">
+    <div class="pic"><img src="images/juice-hand-beet.jpg" alt="Fresh pressed SONKEI CO. Beet Radiance juice, held up to the light"></div>
+    <div class="copy">
+      <div class="eyebrow" style="color:var(--tan);">THE COLD-PRESS DIFFERENCE</div>
+      <h2>Slow pressed. No heat. No shortcuts.</h2>
+      <p>Most bottled juice is pasteurized with heat, which extends shelf life but breaks down the vitamins, enzymes and flavor along the way. We do it differently.</p>
+      <div class="jc-steps">
+        <div class="jc-step">
+          <span class="num">01</span>
+          <span class="t"><strong>Real produce, hand-selected</strong>Fresh fruits, vegetables and roots — nothing frozen, nothing from concentrate.</span>
+        </div>
+        <div class="jc-step">
+          <span class="num">02</span>
+          <span class="t"><strong>Slow hydraulic pressing</strong>Gentle pressure extracts the juice without heat, preserving nutrients and natural enzymes.</span>
+        </div>
+        <div class="jc-step">
+          <span class="num">03</span>
+          <span class="t"><strong>Bottled fresh, no additives</strong>No added sugar, no preservatives, no concentrates — just pressed and bottled in small batches.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="jc-flavors">
+  <div class="wrap">
+    <div class="jc-flavors-head">
+      <div class="eyebrow" style="color:var(--tan);">KNOW YOUR FLAVORS</div>
+      <h2>A blend for every kind of day.</h2>
+    </div>
+    <div class="jc-flavor-grid">
+      <div class="jc-flavor">
+        <div class="dot" style="background:#7A9A4A;"></div>
+        <h4>Green Glow</h4>
+        <p>Cucumber, celery, pineapple, kale &amp; lemon — a hydrating, chlorophyll-rich reset for energy and digestion.</p>
+      </div>
+      <div class="jc-flavor">
+        <div class="dot" style="background:#E8B84B;"></div>
+        <h4>Tropical Sunshine</h4>
+        <p>Pineapple, mango, orange &amp; passion fruit — bright vitamin C to support immunity and mood.</p>
+      </div>
+      <div class="jc-flavor">
+        <div class="dot" style="background:#E08A2C;"></div>
+        <h4>Citrus Boost</h4>
+        <p>Orange, carrot, ginger &amp; turmeric — an anti-inflammatory blend to warm the body and sharpen focus.</p>
+      </div>
+      <div class="jc-flavor">
+        <div class="dot" style="background:#8E2740;"></div>
+        <h4>Berry Bliss</h4>
+        <p>Strawberry, blueberry, raspberry &amp; apple — antioxidant-rich and naturally sweet, for skin and recovery.</p>
+      </div>
+      <div class="jc-flavor">
+        <div class="dot" style="background:#D9667A;"></div>
+        <h4>Watermelon Refresh</h4>
+        <p>Watermelon, lime &amp; mint — a light, hydrating pick-me-up for warm days and post-workout recovery.</p>
+      </div>
+      <div class="jc-flavor">
+        <div class="dot" style="background:#7A1F32;"></div>
+        <h4>Beet Radiance</h4>
+        <p>Beetroot, apple, carrot, lemon &amp; ginger — supports circulation, energy and a natural radiant glow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nt-band">
+  <img src="images/juice-group.jpg" alt="Friends of every background sharing SONKEI CO. juices">
+  <div class="nt-band-text">
+    <div class="title">Nourishment for everyone.</div>
+    <p>Every body, every background, every journey — our fresh pressed juices are made for the whole SONKEI community.</p>
+  </div>
+</section>
+
+<section class="nt-pillars">
+  <div class="wrap">
+    <div class="nt-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M12 3c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/></svg>
+      <span>100% NATURAL — No additives, no preservatives.</span>
+    </div>
+    <div class="nt-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+      <span>PACKED WITH VITAMINS &amp; MINERALS</span>
+    </div>
+    <div class="nt-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M12 21V9"/><path d="M12 9C12 5 9 3 6 3c0 4 2 6 6 6z"/><path d="M12 13c0-4 3-6 6-6 0 4-2 6-6 6z"/></svg>
+      <span>FRESH PRESSED — For maximum nutrition.</span>
+    </div>
+    <div class="nt-pillar">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="1.4"><path d="M4 15c1.5-3 4-3 5-1.5 1-2 3.5-2 4.5.5.7-1.4 2.7-1.6 3.5 0 .8-1.2 2.5-1 3 .5"/><path d="M4 15v3h16v-3"/></svg>
+      <span>MADE WITH REAL INGREDIENTS YOU CAN TRUST</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-brand">
+      <img src="images/butterfly.png" alt="SONKEI butterfly mark">
+      <div class="word">SONKEI<small>CO.</small></div>
+      <p>Rooted in nature.<br>Made with intention.</p>
+      <div class="footer-social">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><path d="M17 3c.6 2.4 2.2 3.8 5 4v3.2c-1.9 0-3.6-.6-5-1.7V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.2a2.8 2.8 0 1 0 2 2.7V3h3z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px; margin-top:8px;">
+        <a href="contact.html">sales@soulfulsentimentsenterprise.com</a>
+        <a href="contact.html">(888) 929-1763</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>NUTRITION</h4>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="sea-moss.html">Sea Moss Gel</a>
+      <a href="juices.html">Fresh Pressed Juices</a>
+    </div>
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <a href="shop.html">Apparel</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="skincare.html">Skincare</a>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <a href="index.html#story">About Us</a>
+      <a href="index.html#story">Our Purpose</a>
+      <a href="#">Sustainability</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <a href="mailto:sales@soulfulsentimentsenterprise.com">sales@soulfulsentimentsenterprise.com</a>
+      <a href="tel:+18889291763">(888) 929-1763</a>
+      <span>4780 I-55 N, Suite 100, #1147<br>Jackson, MS 39211</span>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 SONKEI CO. — Soulful Sentiments Enterprise LLC. All rights reserved.</span>
+    <div class="footer-legal">
+      <span>Privacy Policy</span>
+      <span>Terms &amp; Conditions</span>
+      <span>Cookie Settings</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

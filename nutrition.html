@@ -8,42 +8,25 @@
 <link rel="icon" href="images/favicon.png">
 <link rel="stylesheet" href="styles.css">
 <style>
-  .nt-header{ position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; min-height:380px; }
+  .nt-header{ position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; min-height:420px; }
   .nt-header img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
-  .nt-header::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(17,18,20,0.55) 0%, rgba(17,18,20,0.72) 100%); }
+  .nt-header::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(17,18,20,0.5) 0%, rgba(17,18,20,0.72) 100%); }
   .nt-header-text{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:12px; padding:64px 24px; }
   .nt-header-text img{ width:34px; height:auto; margin-bottom:4px; filter:brightness(0) invert(1); }
   .nt-header-text .title{ font-family:var(--serif); font-size:clamp(30px,4.4vw,48px); color:var(--offwhite); line-height:1.08; }
   .nt-header-text p{ font-size:14px; color:rgba(243,240,235,0.75); max-width:460px; }
 
-  /* Sea Moss feature split */
-  .sm-feature{ position:relative; min-height:520px; overflow:hidden; display:flex; align-items:center; }
-  .sm-feature img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
-  .sm-feature::before{ content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(17,18,20,0.82) 0%, rgba(17,18,20,0.5) 48%, rgba(17,18,20,0.1) 78%); }
-  .sm-feature .text{ position:relative; z-index:2; display:flex; flex-direction:column; gap:16px; padding:70px 0; max-width:520px; }
-  .sm-title{ font-family:var(--serif); font-size:clamp(28px,3.6vw,40px); color:var(--offwhite); line-height:1.12; }
-  .sm-points{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
-  .sm-points .pt{ display:flex; align-items:center; gap:10px; font-size:13px; color:rgba(243,240,235,0.85); }
-  .sm-points .pt svg{ flex-shrink:0; }
+  .nt-hub{ display:grid; grid-template-columns:repeat(2, 1fr); }
+  .nt-hub-card{ position:relative; min-height:480px; overflow:hidden; display:flex; align-items:flex-end; }
+  .nt-hub-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
+  .nt-hub-card:hover img{ transform:scale(1.05); }
+  .nt-hub-card::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(17,18,20,0) 30%, rgba(17,18,20,0.88) 100%); }
+  .nt-hub-content{ position:relative; z-index:2; padding:36px 32px; display:flex; flex-direction:column; gap:10px; width:100%; }
+  .nt-hub-content h3{ font-family:var(--serif); font-size:28px; color:var(--offwhite); margin:2px 0 0; }
+  .nt-hub-content p{ font-size:13px; color:rgba(243,240,235,0.82); line-height:1.6; margin:0; max-width:340px; }
+  .nt-hub-content .btn{ margin-top:10px; align-self:flex-start; }
 
-  .nt-intro{ padding:64px 0 8px; text-align:center; }
-  .nt-intro .eyebrow{ color:var(--tan); }
-  .nt-intro h2{ font-family:var(--serif); font-size:clamp(24px,3vw,32px); color:var(--black); margin:8px 0 10px; }
-  .nt-intro p{ max-width:580px; margin:0 auto; font-size:14px; line-height:1.7; color:rgba(17,18,20,0.68); }
-
-  .nt-grid{ display:grid; grid-template-columns:repeat(3, minmax(200px,1fr)); gap:28px; padding:44px 0 30px; }
-  .p-card{ display:flex; flex-direction:column; }
-  .p-stage{ position:relative; border-radius:6px; padding-top:135%; background:var(--offwhite); overflow:hidden; display:block; }
-  .p-stage img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; transition:transform 0.5s ease; }
-  .p-stage:hover img{ transform:scale(1.04); }
-  .p-info{ margin-top:16px; text-align:left; }
-  .p-info .cat{ font-size:11px; letter-spacing:0.08em; color:var(--tan); text-transform:uppercase; }
-  .p-info .name{ font-family:var(--serif); font-size:19px; color:var(--black); margin-top:4px; }
-  .p-info .desc{ font-size:12.5px; line-height:1.6; color:rgba(17,18,20,0.62); margin-top:6px; }
-  .p-info .row{ display:flex; align-items:center; justify-content:space-between; margin-top:14px; }
-  .p-info .price{ font-size:13px; color:var(--black); }
-
-  .nt-band{ position:relative; min-height:440px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; margin-top:20px; }
+  .nt-band{ position:relative; min-height:440px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; }
   .nt-band img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; }
   .nt-band::before{ content:""; position:absolute; inset:0; z-index:1; background:rgba(17,18,20,0.5); }
   .nt-band-text{ position:relative; z-index:2; max-width:560px; padding:0 24px; display:flex; flex-direction:column; gap:14px; align-items:center; }
@@ -56,11 +39,8 @@
   .nt-pillar span{ font-size:12px; letter-spacing:0.05em; color:rgba(17,18,20,0.72); }
 
   @media (max-width: 880px){
-    .nt-grid{ grid-template-columns:repeat(2, minmax(160px,1fr)); }
-    .sm-feature .text{ max-width:100%; }
-  }
-  @media (max-width: 480px){
-    .nt-grid{ gap:20px; }
+    .nt-hub{ grid-template-columns:1fr; }
+    .nt-hub-card{ min-height:400px; }
   }
 </style>
 </head>
@@ -107,109 +87,26 @@
   </div>
 </section>
 
-<section class="sm-feature">
-  <img src="images/seamoss-banner.jpg" alt="SONKEI CO. St Lucian Sea Moss Gel">
-  <div class="wrap">
-    <div class="text">
-      <div class="eyebrow" style="color:var(--tan);">NATURE'S ORIGINAL SUPERFOOD</div>
-      <div class="sm-title">St Lucian Sea Moss Gel</div>
-      <p style="font-size:14px; line-height:1.7; color:rgba(243,240,235,0.85);">Sun dried and wild crafted, packed with 92 vitamins and minerals. Pure. Powerful. Sonkei.</p>
-      <div class="sm-points">
-        <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4z"/></svg> Supports Immunity &amp; Energy</div>
-        <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg> Supports Skin &amp; Gut Health</div>
-        <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B7A2D4" stroke-width="1.8"><path d="M12 3c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/></svg> 100% Natural &amp; Vegan</div>
-      </div>
-      <div style="margin-top:8px; display:flex; align-items:center; gap:18px;">
-        <a class="btn btn-primary" href="#">SHOP SEA MOSS GEL</a>
-        <span style="font-size:13px; color:rgba(243,240,235,0.75);">$34.00 &middot; 16 oz</span>
-      </div>
+<section class="nt-hub">
+  <a class="nt-hub-card" href="sea-moss.html">
+    <img src="images/seamoss-banner.jpg" alt="SONKEI CO. St Lucian Sea Moss Gel">
+    <div class="nt-hub-content">
+      <div class="eyebrow" style="color:var(--lavender);">01&nbsp; SEA MOSS</div>
+      <h3>St Lucian Sea Moss Gel</h3>
+      <p>Sun dried and wild crafted, packed with 92 vitamins and minerals. Pure. Powerful. Sonkei.</p>
+      <span class="btn btn-outline">SHOP SEA MOSS</span>
     </div>
-  </div>
+  </a>
+  <a class="nt-hub-card" href="juices.html">
+    <img src="images/juice-lineup.jpg" alt="SONKEI CO. six fresh pressed juices">
+    <div class="nt-hub-content">
+      <div class="eyebrow" style="color:var(--lavender);">02&nbsp; JUICES</div>
+      <h3>Fresh Pressed Juices</h3>
+      <p>Six cold-pressed flavors made with real fruits, vegetables and roots — no additives, no preservatives.</p>
+      <span class="btn btn-outline">SHOP JUICES</span>
+    </div>
+  </a>
 </section>
-
-<div class="wrap">
-  <div class="nt-intro">
-    <div class="eyebrow">FRESH PRESSED JUICES</div>
-    <h2>Six Flavors. One Mission.</h2>
-    <p>Cold-pressed with real fruits, vegetables and roots — no additives, no preservatives. Just fresh pressed nutrition, made for maximum nourishment.</p>
-  </div>
-
-  <div class="nt-grid">
-
-    <div class="p-card">
-      <a class="p-stage" href="#" aria-label="Shop Green Glow">
-        <img src="images/green-glow-card.jpg" alt="SONKEI CO. Green Glow juice — cucumber, celery, pineapple, kale, lemon">
-      </a>
-      <div class="p-info">
-        <div class="cat">Cucumber &middot; Celery &middot; Pineapple &middot; Kale &middot; Lemon</div>
-        <div class="name">Green Glow</div>
-        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
-        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
-      </div>
-    </div>
-
-    <div class="p-card">
-      <a class="p-stage" href="#" aria-label="Shop Tropical Sunshine">
-        <img src="images/tropical-sunshine.jpg" alt="SONKEI CO. Tropical Sunshine juice — pineapple, mango, orange, passion fruit">
-      </a>
-      <div class="p-info">
-        <div class="cat">Pineapple &middot; Mango &middot; Orange &middot; Passion Fruit</div>
-        <div class="name">Tropical Sunshine</div>
-        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
-        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
-      </div>
-    </div>
-
-    <div class="p-card">
-      <a class="p-stage" href="#" aria-label="Shop Citrus Boost">
-        <img src="images/citrus-boost.jpg" alt="SONKEI CO. Citrus Boost juice — orange, carrot, ginger, turmeric">
-      </a>
-      <div class="p-info">
-        <div class="cat">Orange &middot; Carrot &middot; Ginger &middot; Turmeric</div>
-        <div class="name">Citrus Boost</div>
-        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
-        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
-      </div>
-    </div>
-
-    <div class="p-card">
-      <a class="p-stage" href="#" aria-label="Shop Berry Bliss">
-        <img src="images/berry-bliss.jpg" alt="SONKEI CO. Berry Bliss juice — strawberry, blueberry, raspberry, apple">
-      </a>
-      <div class="p-info">
-        <div class="cat">Strawberry &middot; Blueberry &middot; Raspberry &middot; Apple</div>
-        <div class="name">Berry Bliss</div>
-        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
-        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
-      </div>
-    </div>
-
-    <div class="p-card">
-      <a class="p-stage" href="#" aria-label="Shop Watermelon Refresh">
-        <img src="images/watermelon-refresh.jpg" alt="SONKEI CO. Watermelon Refresh juice — watermelon, lime, mint">
-      </a>
-      <div class="p-info">
-        <div class="cat">Watermelon &middot; Lime &middot; Mint</div>
-        <div class="name">Watermelon Refresh</div>
-        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
-        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
-      </div>
-    </div>
-
-    <div class="p-card">
-      <a class="p-stage" href="#" aria-label="Shop Beet Radiance">
-        <img src="images/beet-radiance-card.jpg" alt="SONKEI CO. Beet Radiance juice — beetroot, apple, carrot, lemon, ginger">
-      </a>
-      <div class="p-info">
-        <div class="cat">Beetroot &middot; Apple &middot; Carrot &middot; Lemon &middot; Ginger</div>
-        <div class="name">Beet Radiance</div>
-        <div class="desc">Fresh pressed, 100% natural. 12 fl oz.</div>
-        <div class="row"><span class="price">$9.00</span><a class="btn btn-dark" style="padding:9px 18px; font-size:11px;" href="#">SHOP NOW</a></div>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 <section class="nt-band">
   <img src="images/juice-group.jpg" alt="Friends of every background sharing SONKEI CO. juices">
@@ -258,12 +155,9 @@
     </div>
     <div class="footer-col">
       <h4>NUTRITION</h4>
-      <a href="nutrition.html">Sea Moss Gel</a>
-      <a href="nutrition.html">Green Glow</a>
-      <a href="nutrition.html">Tropical Sunshine</a>
-      <a href="nutrition.html">Citrus Boost</a>
-      <a href="nutrition.html">Berry Bliss</a>
-      <a href="nutrition.html">Watermelon Refresh</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="sea-moss.html">Sea Moss Gel</a>
+      <a href="juices.html">Fresh Pressed Juices</a>
     </div>
     <div class="footer-col">
       <h4>SHOP</h4>

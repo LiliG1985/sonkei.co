@@ -34,6 +34,17 @@
   .pillar-content p{ font-size:13px; color:rgba(243,240,235,0.8); line-height:1.6; margin:0; max-width:320px; }
   .pillar-content .btn{ margin-top:10px; align-self:flex-start; }
 
+  .wellness{ background:var(--offwhite); padding:64px 0; }
+  .wellness-head{ text-align:center; max-width:640px; margin:0 auto 40px; }
+  .wellness-head h2{ font-family:var(--serif); font-size:clamp(24px,3vw,32px); margin:8px 0 12px; }
+  .wellness-head p{ font-size:14px; line-height:1.75; color:rgba(17,18,20,0.65); }
+  .wellness-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:rgba(17,18,20,0.08); border:1px solid rgba(17,18,20,0.08); }
+  .wellness-card{ background:var(--offwhite); padding:30px 26px; display:flex; flex-direction:column; gap:8px; }
+  .wellness-card .stat{ font-family:var(--serif); font-size:32px; color:var(--lavender-deep); }
+  .wellness-card h4{ font-size:12px; letter-spacing:0.08em; text-transform:uppercase; margin:0; }
+  .wellness-card p{ font-size:12.5px; line-height:1.6; color:rgba(17,18,20,0.6); margin:0; }
+  .wellness-card a{ font-size:11px; letter-spacing:0.06em; color:var(--lavender-deep); margin-top:4px; }
+
   .philosophy{ position:relative; min-height:400px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; }
   .philosophy img{ position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%; }
   .philosophy::before{ content:""; position:absolute; inset:0; z-index:1; background:rgba(17,18,20,0.52); }
@@ -66,6 +77,7 @@
   @media (max-width: 880px){
     .pillars{ grid-template-columns:1fr; }
     .pillar-card{ min-height:420px; }
+    .wellness-grid{ grid-template-columns:1fr; }
   }
   @media (max-width: 700px){
     .values{ grid-template-columns:repeat(2, minmax(140px,1fr)); }
@@ -164,6 +176,37 @@
   </a>
 </section>
 
+<!-- WHOLE-BODY WELLNESS -->
+<section class="wellness">
+  <div class="wrap">
+    <div class="wellness-head">
+      <div class="eyebrow" style="color:var(--tan);">WHOLE-BODY WELLNESS</div>
+      <h2>Rooted in nature, from the inside out.</h2>
+      <p>Wellness isn&rsquo;t one product — it&rsquo;s a ritual. Here&rsquo;s a look at what goes into SONKEI CO., from the ocean to the press to the jar.</p>
+    </div>
+    <div class="wellness-grid">
+      <div class="wellness-card">
+        <div class="stat">92</div>
+        <h4>VITAMINS &amp; MINERALS</h4>
+        <p>Our St Lucian Sea Moss Gel is wild crafted and sun dried the traditional way — no shortcuts, no fillers.</p>
+        <a href="sea-moss.html">SHOP SEA MOSS &rarr;</a>
+      </div>
+      <div class="wellness-card">
+        <div class="stat">6</div>
+        <h4>COLD-PRESSED FLAVORS</h4>
+        <p>No heat, no additives, no added sugar — just real fruits, vegetables and roots, fresh pressed.</p>
+        <a href="juices.html">SHOP JUICES &rarr;</a>
+      </div>
+      <div class="wellness-card">
+        <div class="stat">0%</div>
+        <h4>HARSH CHEMICALS</h4>
+        <p>Gentle, nutrient-rich skincare formulas made to heal and nurture your skin, naturally.</p>
+        <a href="skincare.html">SHOP SKINCARE &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PHILOSOPHY -->
 <section class="philosophy">
   <img src="images/juice-friends.jpg" alt="">
@@ -234,10 +277,9 @@
     </div>
     <div class="footer-col">
       <h4>NUTRITION</h4>
-      <a href="nutrition.html">Sea Moss Gel</a>
-      <a href="nutrition.html">Fresh Pressed Juices</a>
-      <a href="nutrition.html">Beet Radiance</a>
-      <a href="nutrition.html">Green Glow</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="sea-moss.html">Sea Moss Gel</a>
+      <a href="juices.html">Fresh Pressed Juices</a>
     </div>
     <div class="footer-col">
       <h4>SKINCARE</h4>
