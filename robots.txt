@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lilig1985.github.io/sonkei.co/sitemap.xml
