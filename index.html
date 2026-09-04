@@ -47,6 +47,14 @@
   .story-inner{ max-width:720px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; }
   .story-title{ font-family:var(--serif); font-size:clamp(28px,3.6vw,40px); color:var(--black); line-height:1.1; margin:10px 0 26px; }
   .story-body{ font-size:14.5px; line-height:1.8; color:rgba(17,18,20,0.72); margin:0 0 18px; text-align:left; }
+  .story-grid{ max-width:1100px; margin:44px auto 0; display:grid; grid-template-columns:0.82fr 1.18fr; gap:60px; align-items:center; }
+  .story-photo img{ width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 20px 50px rgba(17,18,20,0.14); }
+  .story-copy{ text-align:left; }
+  .story-copy .story-title{ text-align:left; margin-top:0; }
+  @media (max-width:860px){
+    .story-grid{ grid-template-columns:1fr; gap:30px; }
+    .story-photo{ order:-1; max-width:440px; margin:0 auto; }
+  }
 
   .pillars{ display:grid; grid-template-columns:repeat(3, 1fr); }
   .pillar-card{ position:relative; min-height:540px; overflow:hidden; display:flex; align-items:flex-end; }
@@ -172,9 +180,16 @@
   <div class="wrap story-inner">
     <img src="images/butterfly.png" alt="SONKEI butterfly mark" style="width:30px; height:auto; margin:0 auto 18px;">
     <div class="eyebrow" style="color:var(--tan); text-align:center;">OUR STORY</div>
-    <div class="story-title">ROOTED IN CARE.<br>MADE TO RADIATE.</div>
-    <p class="story-body">SonKEI Co. is a family-owned beauty and wellness brand born from a mother&rsquo;s love and a daughter&rsquo;s personal journey. After watching my daughter struggle with severe teenage acne and harsh, chemical-filled products, I set out to create a pure, 100% chemical-free alternative. What began as a personal mission to heal her skin quickly blossomed into SonKEI Co.&mdash;a brand dedicated to nurturing your mind, body, and soul.</p>
-    <p class="story-body">Today, we offer a holistic approach to wellness through three natural pillars: gentle, nutrient-rich facial skincare, mineral-packed wellness beverages like Sea Moss and natural juices, and motivational apparel designed to inspire and uplift your daily life. At SonKEI Co., we believe true beauty is a reflection of overall health, and we are committed to helping you look, feel, and live your absolute best&mdash;naturally.</p>
+  </div>
+  <div class="wrap story-grid">
+    <div class="story-photo">
+      <img src="images/our-story.jpg" alt="The mother-daughter team behind SONKEI CO.">
+    </div>
+    <div class="story-copy">
+      <div class="story-title">ROOTED IN CARE.<br>MADE TO RADIATE.</div>
+      <p class="story-body">SonKEI Co. is a family-owned beauty and wellness brand born from a mother&rsquo;s love and a daughter&rsquo;s personal journey. After watching my daughter struggle with severe teenage acne and harsh, chemical-filled products, I set out to create a pure, 100% chemical-free alternative. What began as a personal mission to heal her skin quickly blossomed into SonKEI Co.&mdash;a brand dedicated to nurturing your mind, body, and soul.</p>
+      <p class="story-body">Today, we offer a holistic approach to wellness through three natural pillars: gentle, nutrient-rich facial skincare, mineral-packed wellness beverages like Sea Moss and natural juices, and motivational apparel designed to inspire and uplift your daily life. At SonKEI Co., we believe true beauty is a reflection of overall health, and we are committed to helping you look, feel, and live your absolute best&mdash;naturally.</p>
+    </div>
   </div>
 </section>
 
