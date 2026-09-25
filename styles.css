@@ -120,3 +120,14 @@ input{ font-family:var(--sans); }
 @media (max-width: 880px){
   .grid-2{ grid-template-columns:1fr; }
 }
+
+/* Floating WhatsApp button */
+.wa-float{
+  position:fixed; bottom:24px; right:24px; width:56px; height:56px;
+  background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 20px rgba(17,18,20,0.3); z-index:999; transition:transform 0.2s ease;
+}
+.wa-float:hover{ transform:scale(1.08); }
+@media (max-width:600px){
+  .wa-float{ width:50px; height:50px; bottom:16px; right:16px; }
+}
