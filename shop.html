@@ -68,9 +68,9 @@
   <div class="nav-icons">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></svg>
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
-    <div class="cart-badge">
+    <div class="cart-badge snipcart-checkout" style="cursor:pointer;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-      <span>0</span>
+      <span class="snipcart-items-count">0</span>
     </div>
     <button class="nav-burger" aria-label="Menu">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F3F0EB" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -144,53 +144,98 @@
       </div>
       <div class="product-grid">
 
-        <a class="product-card" href="product.html?id=long-sleeve-dryfit-lavender">
-          <div class="pic" style="background:var(--lavender);"><img src="images/man-longsleeve-gym.jpg" alt="Long-Sleeve Dry-Fit — Lavender" style="object-position:50% 8%;"></div>
-          <div class="name">Long-Sleeve Dry-Fit — Lavender</div>
-          <div class="price">$68.00</div>
-        </a>
-        <a class="product-card" href="product.html?id=hoodie-silver">
-          <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Hoodie — Silver" style="object-position:50% 5%;"></div>
-          <div class="name">Hoodie — Silver</div>
-          <div class="price">$74.00</div>
-        </a>
-        <a class="product-card" href="product.html?id=performance-set-tan">
-          <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Set — Tan" style="object-position:50% 8%;"></div>
-          <div class="name">Performance Set — Tan</div>
-          <div class="price">$86.00</div>
-        </a>
+        <div class="product-card">
+          <a href="product.html?id=long-sleeve-dryfit-lavender">
+            <div class="pic" style="background:var(--lavender);"><img src="images/man-longsleeve-gym.jpg" alt="Long-Sleeve Dry-Fit — Lavender" style="object-position:50% 8%;"></div>
+            <div class="name">Long-Sleeve Dry-Fit — Lavender</div>
+            <div class="price">$68.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="long-sleeve-dryfit-lavender" data-item-name="Long-Sleeve Dry-Fit — Lavender" data-item-price="68.00"
+            data-item-url="/shop.html" data-item-image="/images/man-longsleeve-gym.jpg">ADD TO BAG</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html?id=hoodie-silver">
+            <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Hoodie — Silver" style="object-position:50% 5%;"></div>
+            <div class="name">Hoodie — Silver</div>
+            <div class="price">$74.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="hoodie-silver" data-item-name="Hoodie — Silver" data-item-price="74.00"
+            data-item-url="/shop.html" data-item-image="/images/man-hoodie-ocean.jpg">ADD TO BAG</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html?id=performance-set-tan">
+            <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Set — Tan" style="object-position:50% 8%;"></div>
+            <div class="name">Performance Set — Tan</div>
+            <div class="price">$86.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="performance-set-tan" data-item-name="Performance Set — Tan" data-item-price="86.00"
+            data-item-url="/shop.html" data-item-image="/images/woman-tan-set.jpg">ADD TO BAG</button>
+        </div>
 
-        <a class="product-card" href="product.html?id=performance-tee-tan">
-          <div class="pic" style="background:var(--tan);"><img src="images/man-tee-wall.jpg" alt="Performance Tee — Tan" style="object-position:50% 10%;"></div>
-          <div class="name">Performance Tee — Tan</div>
-          <div class="price">$48.00</div>
-        </a>
-        <a class="product-card" href="product.html?id=cropped-hoodie-lavender">
-          <div class="pic" style="background:var(--lavender);"><img src="images/woman-hoodie-back.jpg" alt="Cropped Hoodie — Lavender" style="object-position:50% 4%;"></div>
-          <div class="name">Cropped Hoodie — Lavender</div>
-          <div class="price">$78.00</div>
-        </a>
-        <a class="product-card" href="product.html?id=oversized-tee-lavender">
-          <div class="pic" style="background:var(--lavender);"><img src="images/woman-coastal.jpg" alt="Oversized Tee — Lavender" style="object-position:50% 10%;"></div>
-          <div class="name">Oversized Tee — Lavender</div>
-          <div class="price">$52.00</div>
-        </a>
+        <div class="product-card">
+          <a href="product.html?id=performance-tee-tan">
+            <div class="pic" style="background:var(--tan);"><img src="images/man-tee-wall.jpg" alt="Performance Tee — Tan" style="object-position:50% 10%;"></div>
+            <div class="name">Performance Tee — Tan</div>
+            <div class="price">$48.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="performance-tee-tan" data-item-name="Performance Tee — Tan" data-item-price="48.00"
+            data-item-url="/shop.html" data-item-image="/images/man-tee-wall.jpg">ADD TO BAG</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html?id=cropped-hoodie-lavender">
+            <div class="pic" style="background:var(--lavender);"><img src="images/woman-hoodie-back.jpg" alt="Cropped Hoodie — Lavender" style="object-position:50% 4%;"></div>
+            <div class="name">Cropped Hoodie — Lavender</div>
+            <div class="price">$78.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="cropped-hoodie-lavender" data-item-name="Cropped Hoodie — Lavender" data-item-price="78.00"
+            data-item-url="/shop.html" data-item-image="/images/woman-hoodie-back.jpg">ADD TO BAG</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html?id=oversized-tee-lavender">
+            <div class="pic" style="background:var(--lavender);"><img src="images/woman-coastal.jpg" alt="Oversized Tee — Lavender" style="object-position:50% 10%;"></div>
+            <div class="name">Oversized Tee — Lavender</div>
+            <div class="price">$52.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="oversized-tee-lavender" data-item-name="Oversized Tee — Lavender" data-item-price="52.00"
+            data-item-url="/shop.html" data-item-image="/images/woman-coastal.jpg">ADD TO BAG</button>
+        </div>
 
-        <a class="product-card" href="product.html?id=performance-leggings-tan">
-          <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Leggings — Tan" style="object-position:50% 60%;"></div>
-          <div class="name">Performance Leggings — Tan</div>
-          <div class="price">$58.00</div>
-        </a>
-        <a class="product-card" href="product.html?id=performance-long-sleeve-silver">
-          <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Performance Long Sleeve — Silver" style="object-position:50% 25%;"></div>
-          <div class="name">Performance Long Sleeve — Silver</div>
-          <div class="price">$68.00</div>
-        </a>
-        <a class="product-card" href="product.html?id=performance-tee-lavender">
-          <div class="pic" style="background:var(--lavender);"><img src="images/man-longsleeve-gym.jpg" alt="Performance Tee — Lavender" style="object-position:50% 30%;"></div>
-          <div class="name">Performance Tee — Lavender</div>
-          <div class="price">$48.00</div>
-        </a>
+        <div class="product-card">
+          <a href="product.html?id=performance-leggings-tan">
+            <div class="pic" style="background:var(--tan);"><img src="images/woman-tan-set.jpg" alt="Performance Leggings — Tan" style="object-position:50% 60%;"></div>
+            <div class="name">Performance Leggings — Tan</div>
+            <div class="price">$58.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="performance-leggings-tan" data-item-name="Performance Leggings — Tan" data-item-price="58.00"
+            data-item-url="/shop.html" data-item-image="/images/woman-tan-set.jpg">ADD TO BAG</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html?id=performance-long-sleeve-silver">
+            <div class="pic" style="background:var(--silver);"><img src="images/man-hoodie-ocean.jpg" alt="Performance Long Sleeve — Silver" style="object-position:50% 25%;"></div>
+            <div class="name">Performance Long Sleeve — Silver</div>
+            <div class="price">$68.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="performance-long-sleeve-silver" data-item-name="Performance Long Sleeve — Silver" data-item-price="68.00"
+            data-item-url="/shop.html" data-item-image="/images/man-hoodie-ocean.jpg">ADD TO BAG</button>
+        </div>
+        <div class="product-card">
+          <a href="product.html?id=performance-tee-lavender">
+            <div class="pic" style="background:var(--lavender);"><img src="images/man-longsleeve-gym.jpg" alt="Performance Tee — Lavender" style="object-position:50% 30%;"></div>
+            <div class="name">Performance Tee — Lavender</div>
+            <div class="price">$48.00</div>
+          </a>
+          <button class="btn btn-dark snipcart-add-item" style="width:100%; margin-top:10px; padding:9px 0; font-size:11px;"
+            data-item-id="performance-tee-lavender" data-item-name="Performance Tee — Lavender" data-item-price="48.00"
+            data-item-url="/shop.html" data-item-image="/images/man-longsleeve-gym.jpg">ADD TO BAG</button>
+        </div>
 
       </div>
     </div>
@@ -253,6 +298,10 @@
 </footer>
 
 <script src="script.js"></script>
+<!-- SNIPCART: replace with the exact install snippet shown in your Snipcart dashboard once verified -->
+<div hidden id="snipcart" data-api-key="PASTE_YOUR_SNIPCART_PUBLIC_API_KEY_HERE" data-config-modal-style="side"></div>
+<script async src="https://cdn.snipcart.com/themes/v3.7.3/default/snipcart.js"></script>
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.3/default/snipcart.css" />
 <a href="https://wa.me/16017381700" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
   <svg width="30" height="30" viewBox="0 0 448 512" fill="#ffffff"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
 </a>
